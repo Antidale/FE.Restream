@@ -1,0 +1,26 @@
+﻿@using FE.Restream.Models
+
+<img src="@SRC" onclick=@(() => HandleClick()) class="@Icon?.Class">
+
+@code {
+    [Parameter]
+    public Icon? Icon { get; set; }
+
+    private string SRC { get; set; } = string.Empty;
+
+    private void HandleClick()
+    {
+        Icon?.HandleClick();
+        SRC = GetImgSrc();
+    }
+
+    private string GetImgSrc() => Icon is null
+        ? string.Empty
+        : $"Icons/{Icon?.Name}";
+
+    protected override void OnInitialized()
+    {
+        SRC = GetImgSrc();
+        base.OnInitialized();
+    }
+}
