@@ -1,0 +1,31 @@
+﻿@using FE.Restream.Enums
+@using FE.Restream.Models
+
+<div>
+    <h3>@HeaderTitle</h3>
+    <div class="tracker-grid">
+        @foreach (var icon in Icons)
+        {
+            <IconComp Icon=@icon />
+        }
+    </div>
+</div>
+
+
+
+@code {
+    [Parameter]
+    public string? HeaderTitle {get; set;}
+
+    List<Icon> Icons = [];
+
+    protected override void OnInitialized()
+    {
+        foreach(IconType iconType in Enum.GetValues<IconType>())
+        {
+            Icons.Add(new Icon(iconType));
+        }
+
+        base.OnInitialized();
+    }
+}
