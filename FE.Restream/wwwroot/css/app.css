@@ -76,6 +76,10 @@ code {
     color: #c02d76;
 }
 
+#app {
+    
+}
+
 .tracker-grid {
     width: 140px;
     padding: 5px;
@@ -90,9 +94,14 @@ code {
         "BaronKey       MagmaKey    TowerKey    LucaKey"
         "Adamant        LegendSword Pan         Spoon"
         ".              RatTail     PinkTail    .";
-    background-color: black;
     justify-items: center;
     align-items: center;
+}
+
+.restream-container {
+    width: 1280px;
+    height: 720px;
+    background-color: black;
 }
 
 .Crystal {
