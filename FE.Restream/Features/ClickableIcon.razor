@@ -1,10 +1,11 @@
 ﻿@using FeTracker.Common.Icons
+@using FeTracker.Common.Interfaces
 
 <img src="@SRC" onclick=@(() => HandleClick()) class="@Icon?.Class">
 
 @code {
     [Parameter]
-    public KeyItemIcon? Icon { get; set; }
+    public IClickable? Icon { get; set; }
 
     private string SRC { get; set; } = string.Empty;
 
