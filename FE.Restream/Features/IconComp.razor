@@ -1,10 +1,10 @@
-﻿@using FE.Restream.Models
+﻿@using FeTracker.Common.Icons
 
 <img src="@SRC" onclick=@(() => HandleClick()) class="@Icon?.Class">
 
 @code {
     [Parameter]
-    public Icon? Icon { get; set; }
+    public KeyItemIcon? Icon { get; set; }
 
     private string SRC { get; set; } = string.Empty;
 
@@ -16,7 +16,7 @@
 
     private string GetImgSrc() => Icon is null
         ? string.Empty
-        : $"Icons/{Icon?.Name}";
+        : $"Icons/{Icon?.FileName}";
 
     protected override void OnInitialized()
     {
