@@ -1,27 +1,30 @@
 ﻿@using FeTracker.Common.Icons
 @using FeTracker.Common.Interfaces
 
-<img src="@SRC" onclick=@(() => HandleClick()) class="@Icon?.Class">
+<img src="@CombinedPath" onclick=@(() => HandleClick()) class="@Icon?.Class">
 
 @code {
     [Parameter]
+    public string IconFolderPath { get; set; } = string.Empty;
+
+    [Parameter]
     public IClickable? Icon { get; set; }
 
-    private string SRC { get; set; } = string.Empty;
+    private string CombinedPath { get; set; } = string.Empty;
 
     private void HandleClick()
     {
         Icon?.HandleClick();
-        SRC = GetImgSrc();
+        CombinedPath = GetFilePath();
     }
 
-    private string GetImgSrc() => Icon is null
+    private string GetFilePath() => Icon is null
         ? string.Empty
-        : $"Icons/{Icon?.FileName}";
+        : Path.Combine(IconFolderPath, Icon?.FileName ?? string.Empty);
 
     protected override void OnInitialized()
     {
-        SRC = GetImgSrc();
+        CombinedPath = GetFilePath();
         base.OnInitialized();
     }
 }
