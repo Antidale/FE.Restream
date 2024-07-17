@@ -1,12 +1,15 @@
 ﻿@page "/"
 @using FE.Restream.Features
-
-<PageTitle>Tracker Start</PageTitle>
+@using FeTracker.Common.RazorComponents;
 
 <div class="restream-container">
-    <KeyItemTracker />
-    <br />
-    <br />
-    <br />
-    <KeyItemTracker />
+    <div class="upper-container">
+        <VideoArea />
+        <VideoArea />
+    </div>
+    <div class="lower-container">
+        <PlayerSection PlayerName="xPankraz" Pronouns="he/him" PlayerSide="tracker-left" />
+        <ObjectiveList />
+        <PlayerSection PlayerName="RydiaCaller" Pronouns="she/her" PlayerSide="tracker-right" />
+    </div>
 </div>

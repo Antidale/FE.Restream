@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34511.84
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FE.Restream", "FE.Restream.csproj", "{35CE91FA-CA8F-4FFB-8674-AE0F52BBE444}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FE.Restream", "FE.Restream.csproj", "{35CE91FA-CA8F-4FFB-8674-AE0F52BBE444}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
