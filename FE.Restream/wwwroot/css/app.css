@@ -77,12 +77,57 @@ code {
 }
 
 #app {
-    
+    color: whitesmoke;
+}
+
+.restream-container {
+    width: 1280px;
+    height: 720px;
+    background-image: url("../Backgrounds/Castle.gif");
+    background-size: cover;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+}
+
+.lower-container {
+    grid-row: 7;
+    display: flex;
+    width: 1280px;
+    justify-content: space-between;
+    align-items: start;
+    gap: 10px 200px;
+    max-height: 240px;
+}
+
+.upper-container {
+    grid-row: 1 / 7;
+    grid-column: 1 / 6;
+    display: flex;
+    justify-content: space-between;
+}
+
+.tracker-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    margin-top: 50px;
+}
+
+.tracker-left {
+    margin-left: 5px;
+    align-items: start;
+}
+
+.tracker-right {
+    margin-right: 5px;
+    align-items: end;
+    text-align: right;
 }
 
 .tracker-grid {
-    width: 140px;
-    padding: 5px;
+    width: 150px;
+    margin: 5px 5px;
     display: grid;
     grid-template-columns: repeat(4, 32px);
     grid-template-rows: repeat(5, 32px);
@@ -94,16 +139,86 @@ code {
         "BaronKey       MagmaKey    TowerKey    LucaKey"
         "Adamant        LegendSword Pan         Spoon"
         ".              RatTail     PinkTail    .";
+    background-color: rgba(0, 0, 99);
     justify-items: center;
     align-items: center;
+    vertical-align: bottom;
+    border: 2px ridge white;
+    border-radius: 5px 5px;
 }
 
-.restream-container {
-    width: 1280px;
-    height: 720px;
+:nth-child(even of div.objective-row) {
+    
+    border-bottom: 1px solid white;
+}
+
+.blue-background {
+    background-color: rgba(0, 0, 99);
+}
+
+.player-info {
+    min-width: 225px;
+}
+
+.playername {
+    color: whitesmoke;
+    font-size: 1.4rem;
+    padding: 10px;
+}
+
+.pronouns {
+    color: whitesmoke;
+    font-size: 1.2rem;
+    padding: 10px;
+}
+
+.video-area {
+    width: 520px;
+    height: 390px;
     background-color: black;
+    margin: 5px 10px 0px 10px;
 }
 
+.white-border {
+    border: 2px ridge white;
+    border-radius: 5px 5px;
+}
+
+.objectives {
+    margin-top: 30px;
+    background-color: rgba(0, 0, 99);
+    flex-grow: 1;
+    max-width: 395px;
+}
+
+.objective-row {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 2px;
+    border-bottom: 1px solid white;
+}
+
+.objective-text {
+    font-size: 1.5rem;
+    width: 350px;
+    justify-content: space-between;
+    text-align: center;
+}
+
+input[type="checkbox"] {
+    width: 25px;
+    height: 25px;
+    appearance: none;
+    background-color: dimgray;
+    border: 1px solid darkgray;
+}
+
+input[type="checkbox"]:checked {
+    background-image: url('../Icons/Porom.svg');
+    background-size: cover;
+}
+
+/* Key Items grid definition */
 .Crystal {
     grid-area: Crystal;
 }
@@ -119,7 +234,6 @@ code {
 .DarknessCrystal {
     grid-area: DarknessCrystal;
 }
-
 
 .EarthCrystal {
     grid-area:EarthCrystal;
@@ -176,4 +290,3 @@ code {
 .PinkTail {
     grid-area: PinkTail;
 }
-

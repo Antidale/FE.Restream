@@ -1,0 +1,13 @@
+﻿<div class="blue-background white-border player-info">
+    <span class="playername">@PlayerName</span>
+    <br />
+    <span class="pronouns">@Pronouns</span>
+</div>
+
+@code {
+    [Parameter]
+    public string? PlayerName { get; set; }
+
+    [Parameter]
+    public string? Pronouns { get; set; }
+}

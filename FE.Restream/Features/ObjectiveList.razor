@@ -1,0 +1,25 @@
+﻿@using FE.Restream.Models
+
+<div class="objectives white-border">
+    @foreach (var objective in Objectives)
+    {
+        <div class="objective-row">
+            <InputCheckbox @bind-Value="objective.PlayerOne" />
+            <div class="objective-text">@objective.Text</div>
+            <InputCheckbox @bind-Value="objective.PlayerTwo" />
+        </div>
+    }
+</div>
+
+@code {
+    List<Objective> Objectives = new List<Objective>{
+        new Objective { Text = "Have Kokkol Forge"},
+        new Objective { Text = "Objective 2"},
+        new Objective { Text = "Objective 3"},
+        new Objective { Text = "Objective 4"},
+        new Objective { Text = "Objective 5"},
+        new Objective { Text = "Objective 6"},
+        new Objective { Text = "Objective 7"},
+        new Objective { Text = "Objective 8"},
+    };
+}
