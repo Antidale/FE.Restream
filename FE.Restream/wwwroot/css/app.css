@@ -125,28 +125,6 @@ code {
     text-align: right;
 }
 
-.tracker-grid {
-    width: 150px;
-    margin: 5px 5px;
-    display: grid;
-    grid-template-columns: repeat(4, 32px);
-    grid-template-rows: repeat(5, 32px);
-    row-gap: 3px;
-    column-gap: 3px;
-    grid-template-areas:
-        "Crystal        Pass        Hook        DarknessCrystal"
-        "EarthCrystal   TwinHarp    Package     SandRuby"
-        "BaronKey       MagmaKey    TowerKey    LucaKey"
-        "Adamant        LegendSword Pan         Spoon"
-        ".              RatTail     PinkTail    .";
-    background-color: rgba(0, 0, 99);
-    justify-items: center;
-    align-items: center;
-    vertical-align: bottom;
-    border: 2px ridge white;
-    border-radius: 5px 5px;
-}
-
 :nth-child(even of div.objective-row) {
     
     border-bottom: 1px solid white;
@@ -218,75 +196,12 @@ input[type="checkbox"]:checked {
     background-size: cover;
 }
 
-/* Key Items grid definition */
-.Crystal {
-    grid-area: Crystal;
+/* adding border, margin to the .tracker-grid class css from the nuget package */
+.tracker-grid {
+    margin: 5px;
+    border: 2px ridge white;
+    border-radius: 5px 5px;
+    background-color: rgba(0, 0, 99);
 }
 
-.Pass {
-    grid-area: Pass;
-}
 
-.Hook {
-    grid-area: Hook;
-}
-
-.DarknessCrystal {
-    grid-area: DarknessCrystal;
-}
-
-.EarthCrystal {
-    grid-area:EarthCrystal;
-}
-
-.TwinHarp {
-    grid-area: TwinHarp;
-}
-
-.Package {
-    grid-area: Package;
-}
-
-.SandRuby {
-    grid-area: SandRuby;
-}
-
-.BaronKey {
-    grid-area: BaronKey;
-}
-
-.MagmaKey {
-    grid-area: MagmaKey;
-}
-
-.TowerKey {
-    grid-area: TowerKey;
-}
-
-.LucaKey {
-    grid-area: LucaKey;
-}
-
-.Adamant {
-    grid-area: Adamant;
-}
-
-.LegendSword {
-    grid-area: LegendSword;
-}
-
-.Pan {
-    grid-area: Pan;
-}
-
-.Spoon {
-    grid-area: Spoon;
-}
-
-.RatTail {
-    grid-area: RatTail;
-}
-
-.PinkTail {
-    grid-area: PinkTail;
-}
