@@ -125,11 +125,6 @@ code {
     text-align: right;
 }
 
-:nth-child(even of div.objective-row) {
-    
-    border-bottom: 1px solid white;
-}
-
 .blue-background {
     background-color: rgba(0, 0, 99);
 }
@@ -139,13 +134,11 @@ code {
 }
 
 .playername {
-    color: whitesmoke;
     font-size: 1.4rem;
     padding: 10px;
 }
 
 .pronouns {
-    color: whitesmoke;
     font-size: 1.2rem;
     padding: 10px;
 }
@@ -195,13 +188,3 @@ input[type="checkbox"]:checked {
     background-image: url('../Icons/Porom.svg');
     background-size: cover;
 }
-
-/* adding border, margin to the .tracker-grid class css from the nuget package */
-.tracker-grid {
-    margin: 5px;
-    border: 2px ridge white;
-    border-radius: 5px 5px;
-    background-color: rgba(0, 0, 99);
-}
-
-
