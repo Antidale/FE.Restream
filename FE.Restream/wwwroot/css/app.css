@@ -125,11 +125,6 @@ code {
     text-align: right;
 }
 
-:nth-child(even of div.objective-row) {
-    
-    border-bottom: 1px solid white;
-}
-
 .blue-background {
     background-color: rgba(0, 0, 99);
 }
@@ -139,13 +134,11 @@ code {
 }
 
 .playername {
-    color: whitesmoke;
     font-size: 1.4rem;
     padding: 10px;
 }
 
 .pronouns {
-    color: whitesmoke;
     font-size: 1.2rem;
     padding: 10px;
 }
