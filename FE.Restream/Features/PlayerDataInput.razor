@@ -1,0 +1,31 @@
+﻿<div class="player-data-entry">
+    <div class="left-player">
+        <b>Left Player Name:</b>
+        <InputText @bind-Value="AppState.LeftPlayerName" />
+
+        <span class="mt-5"><b>Left Player Pronouns:</b></span>
+        <InputText @bind-Value="AppState.LeftPlayerPronouns" />
+    </div>
+
+    @ChildContent
+
+    <div class="right-player">
+        <b>Right Player Name: </b>
+        <InputText @bind-Value="AppState.RightPlayerName" />
+        <span class="mt-5"><b>Right Player Pronouns:</b></span>
+        <InputText @bind-Value="AppState.RightPlayerPronouns" />
+    </div>
+</div>
+
+
+
+<br />
+
+
+@code {
+    [CascadingParameter]
+    public CascadingAppState AppState { get; set; } = new CascadingAppState();
+
+    [Parameter]
+    public RenderFragment ChildContent {get; set;}
+}
