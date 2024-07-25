@@ -1,0 +1,19 @@
+﻿<div>
+ <h3>Objective Entry</h3>
+    <ul>
+        <li><InputText @bind-Value="AppState.ObjectiveOne" /></li>
+        <li><InputText @bind-Value="AppState.ObjectiveTwo" /></li>
+        <li><InputText @bind-Value="AppState.ObjectiveThree" /></li>
+        <li><InputText @bind-Value="AppState.ObjectiveFour" /></li>
+        <li><InputText @bind-Value="AppState.ObjectiveFive" /></li>
+        <li><InputText @bind-Value="AppState.ObjectiveSix" /></li>
+        <li><InputText @bind-Value="AppState.ObjectiveSeven" /></li>
+        <li><InputText @bind-Value="AppState.ObjectiveEight" /></li>
+    </ul>
+</div>
+
+
+@code {
+    [CascadingParameter]
+    public CascadingAppState AppState { get; set; } = new();
+}

@@ -1,0 +1,182 @@
+﻿<CascadingValue Value="this">
+    @ChildContent
+</CascadingValue>
+
+@code {
+    [Parameter]
+    public RenderFragment? ChildContent { get; set; }
+
+    private List<EventCallback<StatePropertyChangedArgs>> Callbacks
+        = new List<EventCallback<StatePropertyChangedArgs>>();
+
+    // Each component will register a callback
+    public void RegisterCallback(EventCallback<StatePropertyChangedArgs> callback)
+    {
+        // Only add if we have not already registered this callback
+        if (!Callbacks.Contains(callback))
+        {
+            Callbacks.Add(callback);
+        }
+    }
+
+    private void NotifyPropertyChanged(StatePropertyChangedArgs args)
+    {
+        foreach (var callback in Callbacks)
+        {
+            // Ignore exceptions due to dangling references
+            try
+            {
+                // Invoke the callback
+                callback.InvokeAsync(args);
+            }
+            catch { }
+        }
+    }
+
+    private string leftPlayerName = string.Empty;
+    public string LeftPlayerName
+    {
+        get => leftPlayerName;
+        set
+        {
+            leftPlayerName = value;
+            StateHasChanged();
+        }
+    }
+
+    private string leftPlayerPronouns = string.Empty;
+    public string LeftPlayerPronouns
+    {
+        get => leftPlayerPronouns;
+        set
+        {
+            leftPlayerPronouns = value;
+            StateHasChanged();
+        }
+    }
+
+    private string rightPlayerName = string.Empty;
+    public string RightPlayerName
+    {
+        get => rightPlayerName;
+        set
+        {
+            rightPlayerName = value;
+            StateHasChanged();
+        }
+    }
+
+    private string rightPlayerPronouns = string.Empty;
+    public string RightPlayerPronouns
+    {
+        get => rightPlayerPronouns;
+        set
+        {
+            rightPlayerPronouns = value;
+            StateHasChanged();
+        }
+    }
+
+    private string objectiveOne = string.Empty;
+    public string ObjectiveOne
+    {
+        get => objectiveOne;
+        set
+        {
+            objectiveOne = value;
+            NotifyPropertyChanged(new(nameof(ObjectiveOne), value));
+            StateHasChanged();
+        }
+    }
+
+    private string objectiveTwo = string.Empty;
+    public string ObjectiveTwo
+    {
+        get => objectiveTwo;
+        set
+        {
+            objectiveTwo = value;
+            NotifyPropertyChanged(new(nameof(ObjectiveTwo), value));
+            StateHasChanged();
+        }
+    }
+
+    private string objectiveThree = string.Empty;
+    public string ObjectiveThree
+    {
+        get => objectiveThree;
+        set
+        {
+            objectiveThree = value;
+            NotifyPropertyChanged(new(nameof(ObjectiveThree), value));
+
+            StateHasChanged();
+        }
+    }
+
+    private string objectiveFour = string.Empty;
+    public string ObjectiveFour
+    {
+        get => objectiveFour;
+        set
+        {
+            objectiveFour = value;
+            NotifyPropertyChanged(new(nameof(ObjectiveFour), value));
+
+            StateHasChanged();
+        }
+    }
+
+    private string objectiveFive = string.Empty;
+    public string ObjectiveFive
+    {
+        get => objectiveFive;
+        set
+        {
+            objectiveFive = value;
+            NotifyPropertyChanged(new(nameof(ObjectiveFive), value));
+
+            StateHasChanged();
+        }
+    }
+
+    private string objectiveSix = string.Empty;
+    public string ObjectiveSix
+    {
+        get => objectiveSix;
+        set
+        {
+            objectiveSix = value;
+            NotifyPropertyChanged(new(nameof(ObjectiveSix), value));
+
+            StateHasChanged();
+        }
+    }
+
+    private string objectiveSeven = string.Empty;
+    public string ObjectiveSeven
+    {
+        get => objectiveSeven;
+        set
+        {
+            objectiveSeven = value;
+            NotifyPropertyChanged(new(nameof(ObjectiveSeven), value));
+
+            StateHasChanged();
+        }
+    }
+
+    private string objectiveEight = string.Empty;
+    public string ObjectiveEight
+    {
+        get => objectiveEight;
+        set
+        {
+            objectiveEight = value;
+            NotifyPropertyChanged(new(nameof(ObjectiveEight), value));
+
+            StateHasChanged();
+        }
+    }
+
+}

@@ -8,8 +8,21 @@
         <VideoArea />
     </div>
     <div class="lower-container">
-        <PlayerSection PlayerName="xPankraz" Pronouns="he/him" PlayerSide="tracker-left" />
+        <PlayerSection PlayerName="@AppState.LeftPlayerName" Pronouns="@AppState.LeftPlayerPronouns" PlayerSide="tracker-left" />
         <ObjectiveList />
-        <PlayerSection PlayerName="RydiaCaller" Pronouns="she/her" PlayerSide="tracker-right" />
+        <PlayerSection PlayerName="@AppState.RightPlayerName" Pronouns="@AppState.RightPlayerPronouns" PlayerSide="tracker-right" />
     </div>
 </div>
+<br />
+<div class="data-entry-container">
+    <PlayerDataInput>
+        <ObjectiveInput />
+    </PlayerDataInput>
+
+</div>
+
+
+@code {
+    [CascadingParameter]
+    public CascadingAppState AppState { get; set; } = new CascadingAppState();
+}
