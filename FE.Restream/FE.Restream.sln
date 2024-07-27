@@ -5,6 +5,11 @@ VisualStudioVersion = 17.8.34511.84
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FE.Restream", "FE.Restream.csproj", "{35CE91FA-CA8F-4FFB-8674-AE0F52BBE444}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D21B470F-92D2-4309-9F0A-114CCAD8D4C7}"
+	ProjectSection(SolutionItems) = preProject
+		amplify.yml = amplify.yml
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
