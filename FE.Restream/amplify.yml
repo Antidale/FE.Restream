@@ -1,0 +1,20 @@
+version: 1
+frontend:
+  phases:
+    preBuild:
+        commands:
+        - curl -sSl https://dot.net/v1/dotnet-sintall.sh > dotnet-install.sh
+        - chmod +x *.sh
+        - ./dotnet-install.sh -c 8.0 -InstallDir ./dotnet8
+        - ./dotnet8/dotnet --version
+    # IMPORTANT - Please verify your build commands
+    build:
+      commands: 
+      - ./dotnet8/donet publish -c Release -o release
+  artifacts:
+    # IMPORTANT - Please verify your build output directory
+    baseDirectory: /relase/wwwroot
+    files:
+      - '**/*'
+  cache:
+    paths: []
