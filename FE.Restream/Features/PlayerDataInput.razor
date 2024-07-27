@@ -16,16 +16,12 @@
         <InputText @bind-Value="AppState.RightPlayerPronouns" />
     </div>
 </div>
-
-
-
 <br />
-
 
 @code {
     [CascadingParameter]
     public CascadingAppState AppState { get; set; } = new CascadingAppState();
 
     [Parameter]
-    public RenderFragment ChildContent {get; set;}
+    public RenderFragment? ChildContent {get; set;}
 }
