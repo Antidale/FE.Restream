@@ -1,0 +1,18 @@
+﻿@using FeTracker.Common.RazorComponents
+
+<div class="tracker-section @PlayerSide">
+    <PlayerData PlayerName="@PlayerName" Pronouns="@Pronouns" />
+    <KeyItemsTracker HideReset="true"/>
+
+</div>
+
+@code {
+    [Parameter]
+    public string PlayerSide { get; set; } = string.Empty;
+
+    [Parameter]
+    public string? PlayerName { get; set; }
+
+    [Parameter]
+    public string? Pronouns { get; set; }
+}
