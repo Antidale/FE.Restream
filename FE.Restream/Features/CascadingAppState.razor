@@ -7,7 +7,7 @@
     public RenderFragment? ChildContent { get; set; }
 
     private List<EventCallback<StatePropertyChangedArgs>> Callbacks
-        = new List<EventCallback<StatePropertyChangedArgs>>();
+    = new List<EventCallback<StatePropertyChangedArgs>>();
 
     // Each component will register a callback
     public void RegisterCallback(EventCallback<StatePropertyChangedArgs> callback)
@@ -30,6 +30,17 @@
                 callback.InvokeAsync(args);
             }
             catch { }
+        }
+    }
+
+    private string heroName = string.Empty;
+    public string HeroName
+    {
+        get => heroName;
+        set
+        {
+            heroName = value;
+            StateHasChanged();
         }
     }
 

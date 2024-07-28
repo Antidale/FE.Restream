@@ -78,6 +78,7 @@ code {
 
 #app {
     color: black;
+    font-family: "Kanit", sans-serif
 }
 
 .restream-container {
@@ -137,17 +138,18 @@ code {
 }
 
 .player-info {
+    margin-top: -15px;
     min-width: 225px;
 }
 
 .playername {
-    font-size: 1.4rem;
-    padding: 10px;
+    font-size: 1.6rem;
+    padding: 0px 10px;
 }
 
 .pronouns {
     font-size: 1.2rem;
-    padding: 10px;
+    padding: 5px 10px;
 }
 
 .video-area {
@@ -177,7 +179,7 @@ code {
 }
 
 .objective-text {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     width: 350px;
     justify-content: space-between;
     text-align: center;
@@ -228,4 +230,32 @@ li {
 h3 {
     margin: 0;
     padding: 0;
+}
+
+.hero-container {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0,0,0,.5);
+    align-items: center;
+    width: 140px;
+    height: 140px;
+    margin-top: 250px;
+    box-shadow:  0px 0px 30px 30px rgba(0,0,0,.4)
+}
+
+.hero-text {
+    font-size: 2rem;
+    margin-bottom: 2px;
+    font-weight: 900;
+    -webkit-text-stroke: black .5px;
+}
+
+.hero-image {
+    width: 64px;
+    height: 96px;
+}
+
+.hero-dropdown {
+    margin-top: -135px;
+    padding-bottom: 50px;
 }

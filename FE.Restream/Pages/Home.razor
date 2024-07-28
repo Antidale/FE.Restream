@@ -1,16 +1,18 @@
 ﻿@page "/"
-@using FE.Restream.Features
 @using FeTracker.Common.RazorComponents;
 
 <div class="restream-container">
     <div class="upper-container">
         <VideoArea />
+        <HeroDisplay />
         <VideoArea />
     </div>
     <div class="lower-container">
-        <PlayerSection PlayerName="@AppState.LeftPlayerName" Pronouns="@AppState.LeftPlayerPronouns" PlayerSide="tracker-left" />
+        <PlayerSection PlayerName="@AppState.LeftPlayerName" Pronouns="@AppState.LeftPlayerPronouns"
+            PlayerSide="tracker-left" />
         <ObjectiveList />
-        <PlayerSection PlayerName="@AppState.RightPlayerName" Pronouns="@AppState.RightPlayerPronouns" PlayerSide="tracker-right" />
+        <PlayerSection PlayerName="@AppState.RightPlayerName" Pronouns="@AppState.RightPlayerPronouns"
+            PlayerSide="tracker-right" />
     </div>
 </div>
 <br />
@@ -18,7 +20,7 @@
     <PlayerDataInput>
         <ObjectiveInput />
     </PlayerDataInput>
-
+    <HeroInput />
 </div>
 
 
