@@ -1,0 +1,18 @@
+@using FE.Restream.Enums
+<!-- add semi translucent gray background, HERO text, and img for the hero.-->
+@if(!string.IsNullOrWhiteSpace(AppState.HeroName) && !AppState.HeroName.Equals(HeroCharacter.None.ToString(), StringComparison.InvariantCultureIgnoreCase))
+{
+    <div class="hero-container">
+        <span class="hero-text">The Hero</span>
+        <img src="@ImgPath" class="hero-image"/>
+    </div>
+}
+
+
+@code {
+
+    [CascadingParameter]
+    public CascadingAppState AppState { get; set; } = new();
+
+    private string ImgPath { get => Path.Combine("Icons/", $"{AppState.HeroName}.gif"); }
+}
