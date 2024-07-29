@@ -7,8 +7,8 @@ Uses components from my [FeTracker.Common](https://github.com/Antidale/FeTracker
 ToDo:
 
 Next steps:
-* Add data entry for player data and objectives
-* Add Hero selector
+* Add timer
+* Allow background selection
 
 Further steps:
 * Allow Restreamer and Tracker duties to be different people
@@ -16,5 +16,5 @@ Further steps:
   * fix objective completion display
 * Allow background selection
 * Add Go Mode indicator
-* Add timer
+
  
