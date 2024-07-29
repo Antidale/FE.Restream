@@ -1,0 +1,30 @@
+@using FE.Restream.Enums;
+
+<div class="hero-dropdown">
+    <h3>Hero Selection:</h3>
+    <InputRadioGroup @bind-Value="@AppState.HeroName" Name="heroSelectionRadioGroup">
+        
+        @for (var i = 0; i < HeroOptions.Length; i++)
+        {
+            var option = HeroOptions[i];
+            <InputRadio Value="option" id="@option" />
+
+            <label for="@option">@option</label>
+            @if(i % 4 == 0)
+            {
+                <br />
+            }
+        }
+    </InputRadioGroup>
+
+</div>
+
+
+
+
+@code {
+    [CascadingParameter]
+    public CascadingAppState AppState { get; set; } = new();
+
+    string[] HeroOptions = Enum.GetNames<HeroCharacter>();
+}
