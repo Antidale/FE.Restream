@@ -1,0 +1,85 @@
+﻿@using FE.Restream.Models
+
+@if(!Objectives.All(x => string.IsNullOrWhiteSpace(x.Text)))
+{
+    <div class="objectives white-border">
+        @foreach (var objective in Objectives)
+            {
+                @if (!string.IsNullOrWhiteSpace(objective.Text))
+                {
+                    <div class="objective-row">
+                        <InputCheckbox @bind-Value="objective.PlayerOne" class="input-checkbox" />
+                        <div class="objective-text">@objective.Text</div>
+                        <InputCheckbox @bind-Value="objective.PlayerTwo" class="input-checkbox" />
+                    </div>
+                }
+            }
+    </div>
+}
+
+
+@code {
+    [CascadingParameter]
+    public CascadingAppState AppState { get; set; } = new();
+
+    List<Objective> Objectives = [];
+
+    protected override void OnInitialized()
+    {
+        Objectives = new List<Objective>{
+            new Objective { Text = "" },
+            new Objective { Text = "" },
+            new Objective { Text = "" },
+            new Objective { Text = "" },
+            new Objective { Text = "" },
+            new Objective { Text = "" },
+            new Objective { Text = "" },
+            new Objective { Text = "" },
+        };
+
+        AppState.RegisterCallback(EventCallback.Factory.Create<StatePropertyChangedArgs>(this, HandlePropertyChanged));
+    }
+
+    private void HandlePropertyChanged(StatePropertyChangedArgs args)
+    {
+        if (args.Value is not string) return;
+
+
+        switch (args.PropertyName)
+        {
+            case nameof(CascadingAppState.ObjectiveOne):
+                UpdateObjectiveText(Objectives.ElementAt(0), (string)args.Value);
+                break;
+            case nameof(CascadingAppState.ObjectiveTwo):
+                UpdateObjectiveText(Objectives.ElementAt(1), (string)args.Value);
+                break;
+            case nameof(CascadingAppState.ObjectiveThree):
+                UpdateObjectiveText(Objectives.ElementAt(2), (string)args.Value);
+                break;
+            case nameof(CascadingAppState.ObjectiveFour):
+                UpdateObjectiveText(Objectives.ElementAt(3), (string)args.Value);
+                break;
+            case nameof(CascadingAppState.ObjectiveFive):
+                UpdateObjectiveText(Objectives.ElementAt(4), (string)args.Value);
+                break;
+            case nameof(CascadingAppState.ObjectiveSix):
+                UpdateObjectiveText(Objectives.ElementAt(5), (string)args.Value);
+                break;
+            case nameof(CascadingAppState.ObjectiveSeven):
+                UpdateObjectiveText(Objectives.ElementAt(6), (string)args.Value);
+                break;
+            case nameof(CascadingAppState.ObjectiveEight):
+                UpdateObjectiveText(Objectives.ElementAt(7), (string)args.Value);
+                break;
+
+            default: break;
+        };
+    }
+
+    private void UpdateObjectiveText(Objective objective, string text)
+    {
+        objective.Text = text;
+        StateHasChanged();
+    }
+
+}
