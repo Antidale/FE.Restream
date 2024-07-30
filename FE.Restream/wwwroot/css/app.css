@@ -165,7 +165,7 @@ code {
 }
 
 .objectives {
-    margin-top: 30px;
+    margin-top: 5px;
     background-color: rgba(0, 0, 99);
     flex-grow: 1;
     max-width: 395px;
@@ -179,7 +179,8 @@ code {
 }
 
 .objective-text {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
+    margin: 0px;
     width: 350px;
     justify-content: space-between;
     text-align: center;
@@ -262,9 +263,10 @@ h3 {
 }
 
 .input-checkbox {
-    margin-top: 2px;
+    margin-top: 3px;
     margin-left: 4px;
     margin-right: 4px;
+    margin-bottom: 0px;
 }
 
 .restream-info {
