@@ -259,3 +259,9 @@ h3 {
     margin-top: -135px;
     padding-bottom: 50px;
 }
+
+.input-checkbox {
+    margin-top: 2px;
+    margin-left: 4px;
+    margin-right: 4px;
+}
