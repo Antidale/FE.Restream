@@ -190,4 +190,16 @@
         }
     }
 
+    private bool hideTracker = false;
+    public bool HideTracker
+    {
+        get => hideTracker;
+        set
+        {
+            hideTracker = value;
+            NotifyPropertyChanged(new(nameof(HideTracker), value));
+            StateHasChanged();
+        }
+    }
+
 }

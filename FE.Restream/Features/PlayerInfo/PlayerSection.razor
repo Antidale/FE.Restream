@@ -2,11 +2,17 @@
 
 <div class="tracker-section @PlayerSide">
     <PlayerData PlayerName="@PlayerName" Pronouns="@Pronouns" />
-    <KeyItemsTracker HideReset="true"/>
+    <div class="@(@AppState.HideTracker ? "hidden-stuff" : "")">
+        <KeyItemsTracker HideReset="true"/>
+    </div>
+    
 
 </div>
 
 @code {
+    [CascadingParameter]
+    CascadingAppState AppState { get; set; } = new();
+
     [Parameter]
     public string PlayerSide { get; set; } = string.Empty;
 
