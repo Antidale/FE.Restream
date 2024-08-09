@@ -1,0 +1,18 @@
+﻿
+<button type="button" class="hide-trackers-btn"
+        @onclick=@(() => UpdateTrackerVisibility())>
+    @buttonText
+</button>
+
+@code {
+    [CascadingParameter]
+    public CascadingAppState AppState { get; set; } = new();
+
+    private string buttonText = "Hide Trackers";
+
+    void UpdateTrackerVisibility()
+    {
+        AppState.HideTracker = !AppState.HideTracker;
+        buttonText = AppState.HideTracker ? "Show Trackers" : "Hide Trackers";
+    }
+}
