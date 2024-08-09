@@ -19,6 +19,10 @@
 
 </div>
 
+<button type="button" class="hide-trackers-btn"
+        @onclick=@(() => UpdateTrackerVisibility())>
+    @buttonText
+</button>
 
 
 
@@ -27,4 +31,12 @@
     public CascadingAppState AppState { get; set; } = new();
 
     string[] HeroOptions = Enum.GetNames<HeroCharacter>();
+
+    private string buttonText = "Hide Trackers";
+
+    void UpdateTrackerVisibility()
+    {
+        AppState.HideTracker = !AppState.HideTracker;
+        buttonText = AppState.HideTracker ? "Show Trackers" : "Hide Trackers";
+    }
 }

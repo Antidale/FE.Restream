@@ -284,3 +284,12 @@ h3 {
 .restream-info p {
     margin: 0;
 }
+
+.hidden-stuff {
+    visibility: hidden;
+}
+
+.hide-trackers-btn {
+    width: 125px;
+    height: 25px;
+}
