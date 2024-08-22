@@ -2,20 +2,22 @@
 
 <div class="HeroSelection">
     <h3>Hero Selection:</h3>
-    <InputRadioGroup @bind-Value="@AppState.HeroName" Name="heroSelectionRadioGroup">
+    <div class="hero-selection-grid">
+        <InputRadioGroup @bind-Value="@AppState.HeroName" Name="heroSelectionRadioGroup">
 
-        @for (var i = 0; i < HeroOptions.Length; i++)
-        {
-            var option = HeroOptions[i];
-            <InputRadio Value="option" id="@option" />
-
-            <label for="@option">@option</label>
-            @if (i % 4 == 0)
+            @for (var i = 0; i < HeroOptions.Length; i++)
             {
-                <br />
+                var option = HeroOptions[i];
+                <div class="@option">
+
+
+                    <InputRadio Value="option" id="@option" />
+
+                    <label for="@option">@option</label>
+                </div>
             }
-        }
-    </InputRadioGroup>
+        </InputRadioGroup>
+    </div>
 
 </div>
 
