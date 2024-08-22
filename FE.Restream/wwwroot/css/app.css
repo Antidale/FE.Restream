@@ -309,10 +309,70 @@ h3 {
 }
 
 .HeroSelection {
-    grid-area: HeroSelection
+    grid-area: HeroSelection;
+    
+}
+
+.hero-selection-grid {
+    display: grid;
+    grid-template-areas:
+        "Cecil   Kain   Rydia   Tellah"
+        "Edward  Rosa   Yang    Palom"
+        "Porom   Cid    Edge    FuSoYa"
+        "None    .      .       .";
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
 }
 
 .hide-trackers-btn {
     grid-area: HideTrackers;
     justify-self: center;
+}
+
+.Cecil {
+    grid-area: Cecil;
+}
+
+.Kain {
+    grid-area: Kain;
+}
+
+.Rydia {
+    grid-area: Rydia;
+}
+
+.Tellah {
+    grid-area: Tellah;
+}
+
+.Edward {
+    grid-area: Edward;
+}
+
+.Rosa {
+    grid-area: Rosa;
+}
+
+.Yang {
+    grid-area: Yang;
+}
+
+.Porom {
+    grid-area: Porom;
+}
+
+.Cid {
+    grid-area: Cid;
+}
+
+.Edge {
+    grid-area: Edge;
+}
+
+.FuSoYa {
+    grid-area: FuSoYa;
+}
+
+.None {
+    grid-area: None;
 }
