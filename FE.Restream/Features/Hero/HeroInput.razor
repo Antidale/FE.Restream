@@ -1,16 +1,16 @@
 @using FE.Restream.Enums;
 
-<div class="hero-dropdown">
+<div class="HeroSelection">
     <h3>Hero Selection:</h3>
     <InputRadioGroup @bind-Value="@AppState.HeroName" Name="heroSelectionRadioGroup">
-        
+
         @for (var i = 0; i < HeroOptions.Length; i++)
         {
             var option = HeroOptions[i];
             <InputRadio Value="option" id="@option" />
 
             <label for="@option">@option</label>
-            @if(i % 4 == 0)
+            @if (i % 4 == 0)
             {
                 <br />
             }
@@ -19,24 +19,9 @@
 
 </div>
 
-<button type="button" class="hide-trackers-btn"
-        @onclick=@(() => UpdateTrackerVisibility())>
-    @buttonText
-</button>
-
-
-
 @code {
     [CascadingParameter]
     public CascadingAppState AppState { get; set; } = new();
 
     string[] HeroOptions = Enum.GetNames<HeroCharacter>();
-
-    private string buttonText = "Hide Trackers";
-
-    void UpdateTrackerVisibility()
-    {
-        AppState.HideTracker = !AppState.HideTracker;
-        buttonText = AppState.HideTracker ? "Show Trackers" : "Hide Trackers";
-    }
 }
