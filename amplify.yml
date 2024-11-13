@@ -5,8 +5,8 @@ frontend:
      commands:
      - curl -sSL https://dot.net/v1/dotnet-install.sh > dotnet-install.sh
      - chmod +x *.sh
-     - ./dotnet-install.sh -c 9.0 -InstallDir ./dotnet8
-     - ./dotnet8/dotnet --version
+     - ./dotnet-install.sh -c 9.0 -InstallDir ./dotnet9
+     - ./dotnet9/dotnet --version
    build:
      commands:
      - ./dotnet9/dotnet publish ./FE.Restream/FE.Restream.csproj -c Release -o release
