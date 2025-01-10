@@ -92,6 +92,10 @@ code {
     color: whitesmoke;
 }
 
+.d2t-background {
+    background-image: url("../Backgrounds/doorway_to_tomorrow.png");
+}
+
 .lower-container {
     grid-row: 7;
     display: flex;
@@ -249,6 +253,11 @@ h3 {
     box-shadow: 0px 0px 33px 33px rgba(15, 15, 15, .4)
 }
 
+.d2t-background .hero-container {
+    box-shadow: 0 0 0 0;
+    background-color: rgba(0, 0, 0, 0%);
+}
+
 .hero-text {
     font-size: 2rem;
     margin-left: -2px;
@@ -303,9 +312,9 @@ h3 {
 .entry-grid {
     display: grid;
     grid-template-areas:
-        "LeftPlayer         .               Objectives      HideTrackers    RightPlayer"
-        "HeroSelection      HeroSelection   Objectives      .               RestreamInfo"
-        ".                  .               Objectives      .               .";
+        "LeftPlayer         .               Objectives      HideTrackers        RightPlayer"
+        "HeroSelection      HeroSelection   Objectives      BackgroundSelect    RestreamInfo"
+        ".                  .               Objectives      .                   .";
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(3, 150px);
 }
@@ -331,6 +340,9 @@ h3 {
     justify-self: center;
 }
 
+.background-select {
+    grid-area: BackgroundSelect;
+}
 .Cecil {
     grid-area: Cecil;
 }
