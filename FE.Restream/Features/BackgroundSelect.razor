@@ -1,0 +1,20 @@
+<div class="background-select">
+    <b>Format Selection</b>
+    <select id="background-select" @onchange="FormatChanged">
+        <option value="" selected>Default</option>
+        <option value="d2t-background">D2T</option>
+    </select>
+</div>
+
+@code {
+    [CascadingParameter]
+    public CascadingAppState AppState { get; set; } = new();
+
+    void FormatChanged(ChangeEventArgs e)
+    {
+        if (e?.Value is not null)
+        {
+            AppState.BackgroundClass = e.Value.ToString() ?? string.Empty;
+        }
+    }
+}
