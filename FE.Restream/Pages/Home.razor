@@ -1,7 +1,7 @@
 ﻿@page "/"
 @using FeTracker.Common.RazorComponents;
 
-<div class="restream-container">
+<div class="restream-container @AppState.BackgroundClass">
     <div class="upper-container">
         <VideoArea />
         <HeroDisplay />
@@ -22,6 +22,7 @@
     <HeroInput />
     <RestreamSizeInfo />
     <HideTrackers />
+    <BackgroundSelect />
 </div>
 
 @code {
