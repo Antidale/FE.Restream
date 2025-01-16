@@ -1,20 +1,24 @@
+@using FE.Restream.Enums
+
 <div class="background-select">
     <b>Format Selection</b>
-    <select id="background-select" @onchange="FormatChanged">
-        <option value="default" selected>Default</option>
-        <option value="d2t-background">D2T</option>
-    </select>
+    <div>
+        <InputRadioGroup @bind-Value="@AppState.BackgroundClass" Name="formatSelectGroup">
+        @for (var i = 0; i < FormatOptions.Length; i++)
+        {
+            var option = FormatOptions[i];
+            <div>
+                <InputRadio Value="option" id="@option" />
+                <label for="@option">@option</label>
+            </div>
+        }
+        </InputRadioGroup>
+    </div>
 </div>
 
 @code {
     [CascadingParameter]
     public CascadingAppState AppState { get; set; } = new();
 
-    void FormatChanged(ChangeEventArgs e)
-    {
-        if (e?.Value is not null)
-        {
-            AppState.BackgroundClass = e.Value.ToString() ?? string.Empty;
-        }
-    }
+    string [] FormatOptions = Enum.GetNames<BackgroundOption>();
 }
