@@ -216,6 +216,18 @@
         }
     }
 
+    private bool hideNotes = false;
+    public bool HideNotes
+    {
+        get => hideNotes;
+        set
+        {
+            hideNotes = value;
+            NotifyPropertyChanged(new(nameof(HideNotes), value));
+            StateHasChanged();
+        }
+    }
+
     private string _backgroundClass = string.Empty;
 
     public string BackgroundClass
@@ -225,6 +237,19 @@
         {
             _backgroundClass = value;
             NotifyPropertyChanged(new (nameof(BackgroundClass), value));
+            StateHasChanged();
+        }
+    }
+
+    private string _textAreaContent = string.Empty;
+
+    public string TextAreaContent
+    {
+        get => _textAreaContent;
+        set
+        {
+            _textAreaContent = value;
+            NotifyPropertyChanged(new (nameof(TextAreaContent), value));
             StateHasChanged();
         }
     }

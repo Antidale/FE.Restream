@@ -309,19 +309,24 @@ h3 {
     height: 25px;
 }
 
+.hide-notes-btn {
+    width: 125px;
+    height: 25px;
+    margin-top: 150px;
+}
+
 .entry-grid {
     display: grid;
     grid-template-areas:
         "LeftPlayer         .               Objectives      HideTrackers        RightPlayer"
         "HeroSelection      HeroSelection   Objectives      BackgroundSelect    RestreamInfo"
-        ".                  .               Objectives      .                   .";
+        "Notes              Notes           Objectives      .                   .";
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(3, 150px);
 }
 
 .HeroSelection {
     grid-area: HeroSelection;
-
 }
 
 .hero-selection-grid {
@@ -343,6 +348,39 @@ h3 {
 .background-select {
     grid-area: BackgroundSelect;
 }
+
+.notes-area {
+    grid-area: Notes;
+}
+
+.notes-display {
+    margin-top: 100px;
+}
+
+.notes-entry-sizing {
+    width: 400px;
+    height: 150px;
+}
+
+.notes-display-area {
+    margin-left: -100px;
+    margin-right: -100px;
+    width: 600px;
+    height: 150px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+.note-text {
+    margin-left: 10px;
+    padding: 0px 3px;
+}
+
+textarea {
+    resize: none;
+}
+
 .Cecil {
     grid-area: Cecil;
 }
