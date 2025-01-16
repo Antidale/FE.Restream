@@ -1,4 +1,6 @@
 ﻿@using FE.Restream.Models
+<div>
+
 
 @if(!Objectives.All(x => string.IsNullOrWhiteSpace(x.Text)))
 {
@@ -16,7 +18,8 @@
             }
     </div>
 }
-
+<NotesDisplay />
+</div>
 
 @code {
     [CascadingParameter]
