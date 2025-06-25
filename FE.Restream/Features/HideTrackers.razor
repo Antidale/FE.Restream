@@ -3,27 +3,17 @@
         @onclick=@(() => UpdateTrackerVisibility())>
     @trackersText
 </button>
-<button type="button" class="hide-notes-btn"
-        @onclick=@(() => UpdateNotesVisibility())>
-    @notesText
-</button>
 
 @code {
     [CascadingParameter]
     public CascadingAppState AppState { get; set; } = new();
 
     private string trackersText = "Hide Trackers";
-    private string notesText = "Hide Notes";
+    
 
     void UpdateTrackerVisibility()
     {
         AppState.HideTracker = !AppState.HideTracker;
         trackersText = AppState.HideTracker ? "Show Trackers" : "Hide Trackers";
-    }
-
-    void UpdateNotesVisibility()
-    {
-        AppState.HideNotes = !AppState.HideNotes;
-        notesText = AppState.HideNotes ? "Show Notes" : "Hide Notes";
     }
 }
