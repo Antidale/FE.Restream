@@ -34,7 +34,7 @@
     }
 
     #region Hero Related
-    
+
     private string heroName = string.Empty;
     public string HeroName
     {
@@ -45,12 +45,12 @@
             StateHasChanged();
         }
     }
-    
+
 
     #endregion
 
     #region Player Info
-    
+
     private string leftPlayerName = string.Empty;
     public string LeftPlayerName
     {
@@ -94,7 +94,7 @@
             StateHasChanged();
         }
     }
-    
+
     #endregion
 
     #region Objectives
@@ -185,6 +185,7 @@
             NotifyPropertyChanged(new(nameof(ObjectiveSeven), value));
 
             StateHasChanged();
+
         }
     }
 
@@ -202,7 +203,7 @@
     }
 
     #endregion
-    
+
 
     private bool hideTracker = false;
     public bool HideTracker
@@ -224,7 +225,7 @@
         set
         {
             _backgroundClass = value;
-            NotifyPropertyChanged(new (nameof(BackgroundClass), value));
+            NotifyPropertyChanged(new(nameof(BackgroundClass), value));
             StateHasChanged();
         }
     }
