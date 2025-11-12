@@ -9,7 +9,7 @@ frontend:
      - ./dotnet10/dotnet --version
    build:
      commands:
-     - ./dotnet9/dotnet publish ./FE.Restream/FE.Restream.csproj -c Release -o release
+     - ./dotnet10/dotnet publish ./FE.Restream/FE.Restream.csproj -c Release -o release
  artifacts:
    baseDirectory: /release/wwwroot
    files:
