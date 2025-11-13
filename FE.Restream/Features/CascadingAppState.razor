@@ -35,198 +35,157 @@
 
     #region Hero Related
 
-    private string heroName = string.Empty;
     public string HeroName
     {
-        get => heroName;
+        get => field;
         set
         {
-            heroName = value;
+            field = value;
             StateHasChanged();
         }
-    }
-
+    } = string.Empty;
 
     #endregion
 
     #region Player Info
 
-    private string leftPlayerName = string.Empty;
     public string LeftPlayerName
     {
-        get => leftPlayerName;
-        set
-        {
-            leftPlayerName = value;
-            StateHasChanged();
-        }
-    }
+        get => field;
+        set { field = value; StateHasChanged(); }
+    } = string.Empty;
 
-    private string leftPlayerPronouns = string.Empty;
     public string LeftPlayerPronouns
     {
-        get => leftPlayerPronouns;
-        set
-        {
-            leftPlayerPronouns = value;
-            StateHasChanged();
-        }
-    }
+        get => field;
+        set { field = value; StateHasChanged(); }
+    } = string.Empty;
 
-    private string rightPlayerName = string.Empty;
     public string RightPlayerName
     {
-        get => rightPlayerName;
-        set
-        {
-            rightPlayerName = value;
-            StateHasChanged();
-        }
-    }
+        get => field;
+        set { field = value; StateHasChanged(); }
+    } = string.Empty;
 
-    private string rightPlayerPronouns = string.Empty;
     public string RightPlayerPronouns
     {
-        get => rightPlayerPronouns;
-        set
-        {
-            rightPlayerPronouns = value;
-            StateHasChanged();
-        }
-    }
+        get => field;
+        set { field = value; StateHasChanged(); }
+    } = string.Empty;
 
     #endregion
 
     #region Objectives
 
-    private string objectiveOne = string.Empty;
     public string ObjectiveOne
     {
-        get => objectiveOne;
+        get => field;
         set
         {
-            objectiveOne = value;
+            field = value;
             NotifyPropertyChanged(new(nameof(ObjectiveOne), value));
             StateHasChanged();
         }
-    }
+    } = string.Empty;
 
-    private string objectiveTwo = string.Empty;
     public string ObjectiveTwo
     {
-        get => objectiveTwo;
+        get => field;
         set
         {
-            objectiveTwo = value;
+            field = value;
             NotifyPropertyChanged(new(nameof(ObjectiveTwo), value));
             StateHasChanged();
         }
-    }
+    } = string.Empty;
 
-    private string objectiveThree = string.Empty;
     public string ObjectiveThree
     {
-        get => objectiveThree;
+        get => field;
         set
         {
-            objectiveThree = value;
+            field = value;
             NotifyPropertyChanged(new(nameof(ObjectiveThree), value));
-
             StateHasChanged();
         }
-    }
+    } = string.Empty;
 
-    private string objectiveFour = string.Empty;
     public string ObjectiveFour
     {
-        get => objectiveFour;
+        get => field;
         set
         {
-            objectiveFour = value;
+            field = value;
             NotifyPropertyChanged(new(nameof(ObjectiveFour), value));
-
             StateHasChanged();
         }
-    }
+    } = string.Empty;
 
-    private string objectiveFive = string.Empty;
     public string ObjectiveFive
     {
-        get => objectiveFive;
+        get => field;
         set
         {
-            objectiveFive = value;
+            field = value;
             NotifyPropertyChanged(new(nameof(ObjectiveFive), value));
-
             StateHasChanged();
         }
-    }
+    } = string.Empty;
 
-    private string objectiveSix = string.Empty;
     public string ObjectiveSix
     {
-        get => objectiveSix;
+        get => field;
         set
         {
-            objectiveSix = value;
+            field = value;
             NotifyPropertyChanged(new(nameof(ObjectiveSix), value));
-
             StateHasChanged();
         }
-    }
+    } = string.Empty;
 
-    private string objectiveSeven = string.Empty;
     public string ObjectiveSeven
     {
-        get => objectiveSeven;
+        get => field;
         set
         {
-            objectiveSeven = value;
+            field = value;
             NotifyPropertyChanged(new(nameof(ObjectiveSeven), value));
-
             StateHasChanged();
-
         }
-    }
+    } = string.Empty;
 
-    private string objectiveEight = string.Empty;
     public string ObjectiveEight
     {
-        get => objectiveEight;
+        get => field;
         set
         {
-            objectiveEight = value;
+            field = value;
             NotifyPropertyChanged(new(nameof(ObjectiveEight), value));
-
             StateHasChanged();
         }
-    }
+    } = string.Empty;
 
     #endregion
 
-
-    private bool hideTracker = false;
     public bool HideTracker
     {
-        get => hideTracker;
+        get => field;
         set
         {
-            hideTracker = value;
+            field = value;
             NotifyPropertyChanged(new(nameof(HideTracker), value));
             StateHasChanged();
         }
     }
 
-    private string _backgroundClass = string.Empty;
-
     public string BackgroundClass
     {
-        get => _backgroundClass;
+        get => field;
         set
         {
-            _backgroundClass = value;
+            field = value;
             NotifyPropertyChanged(new(nameof(BackgroundClass), value));
             StateHasChanged();
         }
-    }
+    } = string.Empty;
 }
